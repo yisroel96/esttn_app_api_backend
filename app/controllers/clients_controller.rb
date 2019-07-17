@@ -2,7 +2,7 @@ class ClientsController < ApplicationController
 
     def index
         @clients = Client.all
-        render json: @clients, include: ['products.appointments']
+        render json: @clients, include: ['products', 'appointments']
     end
 
     def show

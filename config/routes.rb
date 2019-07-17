@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :client_products
+  resources :les
   resources :appointments
   resources :products
   resources :clients

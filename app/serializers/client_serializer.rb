@@ -1,5 +1,5 @@
 class ClientSerializer < ActiveModel::Serializer
-  attributes :id, :name, :age, :products, :appointments
-  has_many :products
+  attributes :id, :name, :age
   has_many :appointments
+  has_many :products
 end
