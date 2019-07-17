@@ -1,8 +1,8 @@
 class LesController < ApplicationController
 
     def index
-        @les = Le.all
-        render json: @les, include: ['products', 'appointments', 'clients']
+        @les = Le.includes(:products, :appointments, :clients) #eager loading
+        render json: @les#, include: ['products', 'appointments', 'clients', 'client_products']
     end
 
     def show
