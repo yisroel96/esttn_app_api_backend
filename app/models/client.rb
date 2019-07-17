@@ -1,3 +1,4 @@
 class Client < ApplicationRecord
-    has_many :products, :appointments
+    has_many :products
+    has_many :appointments
 end
