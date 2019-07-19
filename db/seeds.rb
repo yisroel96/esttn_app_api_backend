@@ -1,4 +1,4 @@
-10.times do
+1.times do
   Le.create(
     name:Faker::Name.name)
 end
