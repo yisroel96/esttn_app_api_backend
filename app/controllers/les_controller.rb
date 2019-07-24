@@ -1,6 +1,7 @@
 class LesController < ApplicationController
 
     def index
+        puts params
         @les = Le.includes(:products, :appointments, :clients) #eager loading
         render json: @les#, include: ['products', 'appointments', 'clients', 'client_products']
     end
@@ -10,3 +11,4 @@ class LesController < ApplicationController
         render json: @le
     end
 end
+
