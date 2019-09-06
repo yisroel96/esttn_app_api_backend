@@ -9,7 +9,7 @@ class ClientsController < ApplicationController
         @client = Client.find_by_id(params[:id])
         render json: @client
     end
-    
+    #fixed
     def update
         @client = Client.find(params[:id])
         @client.like = params[:like]
